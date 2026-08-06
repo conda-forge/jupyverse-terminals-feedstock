@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.1"
+  version: "0.1.2"
 
 package:
   name: jupyverse-terminals
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/j/jupyverse-terminals/jupyverse_terminals-${{ version }}.tar.gz
-    sha256: be8bd83b993be8a226500c90982a4cea945362d4adc5f66087fd8258bbbb68ca
+    sha256: 23905d17abc87dadec4da18092e1d76cc38533cbe546fd2f400f5ff394ae94b7
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - uv-build
+    - uv-build >=0.11.32,<0.12
   run:
     - python >=${{ python_min }}
     - fastapi-core
@@ -33,7 +33,9 @@ tests:
   - python:
       imports: jupyverse_terminals
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: BSD-3-Clause
