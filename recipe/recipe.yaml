@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.2"
+  version: "0.2.0"
 
 package:
   name: jupyverse-terminals
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/j/jupyverse-terminals/jupyverse_terminals-${{ version }}.tar.gz
-    sha256: 23905d17abc87dadec4da18092e1d76cc38533cbe546fd2f400f5ff394ae94b7
+    sha256: fafe90154b456701b916caacef0ccb5f03594c8c8a69e3b12e333b23f1c50fc0
 
 build:
   noarch: python
